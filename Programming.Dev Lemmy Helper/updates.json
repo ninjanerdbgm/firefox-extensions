@@ -1,10 +1,10 @@
 {
     "addons": {
-      "{replace-this-with-actual-guid-matt}": {
+      "{8a24405a-d26c-4ec6-a528-729046bd5152}": {
         "updates": [
           {
-            "version": "0.1",
-            "update_link": "https://example.com/addon-0.1.xpi"
+            "version": "1.1",
+            "update_link": "https://github.com/ninjanerdbgm/firefox-extensions/releases/download/pd-lemmy-helper-1.1/pd-lemmy-helper.xpi"
           }
         ]
       }

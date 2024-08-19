@@ -16,6 +16,15 @@ function ready(fn) {
 
 function generateShowHideCommentsLinks() {
     const commentElements = document.querySelectorAll('article[id^="comment-"]');
+    let showHideCommentButton = document.createElement('button');
+        showHideCommentButton.classList.add('btn');
+        showHideCommentButton.classList.add('btn-link');
+        showHideCommentButton.classList.add('text-muted');
+        showHideCommentButton.classList.add('py-0');
+        showHideCommentButton.classList.add('kn0w-text-link');
+        showHideCommentButton.addEventListener('click', (e) => {
+            hideShowChildComments(e);
+        });     
 
     commentElements.forEach((el) => {
         if (document.querySelector(`#btnShowHideComments-${el.id.split("comment-")[1]}`) != null) return;
@@ -27,35 +36,17 @@ function generateShowHideCommentsLinks() {
             const downvoteButton = buttonRow.querySelector('[aria-label="Downvote"]');        
 
             if (childComments.classList.contains('d-none')) {       
-                let showCommentButton = document.createElement('button');
-                showCommentButton.classList.add('btn');
-                showCommentButton.classList.add('btn-link');
-                showCommentButton.classList.add('text-muted');
-                showCommentButton.classList.add('py-0');
-                showCommentButton.classList.add('kn0w-text-link');
-                hideCommentButton.id = `btnShowHideComments-${el.id.split("comment-")[1]}`;
-                showCommentButton.setAttribute('aria-label', 'Show Child Comments');
-                showCommentButton.innerText = "Show Child Comments";
-                showCommentButton.addEventListener('click', (e) => {
-                    hideShowChildComments(e);
-                });     
+                showHideCommentButton.id = `btnShowHideComments-${el.id.split("comment-")[1]}`;
+                showHideCommentButton.setAttribute('aria-label', 'Show Child Comments');
+                showHideCommentButton.innerText = "Show Child Comments";
 
-                downvoteButton.insertAdjacentElement('afterend', showCommentButton);
+                downvoteButton.insertAdjacentElement('afterend', showHideCommentButton);
             } else {
-                let hideCommentButton = document.createElement('button');
-                hideCommentButton.classList.add('btn');
-                hideCommentButton.classList.add('btn-link');
-                hideCommentButton.classList.add('text-muted');
-                hideCommentButton.classList.add('py-0');
-                hideCommentButton.classList.add('kn0w-text-link');
-                hideCommentButton.id = `btnShowHideComments-${el.id.split("comment-")[1]}`;
-                hideCommentButton.setAttribute('aria-label', 'Hide Child Comments');
-                hideCommentButton.innerText = "Hide Child Comments";
-                hideCommentButton.addEventListener('click', (e) => {
-                    hideShowChildComments(e);
-                });
+                showHideCommentButton.id = `btnShowHideComments-${el.id.split("comment-")[1]}`;
+                showHideCommentButton.setAttribute('aria-label', 'Hide Child Comments');
+                showHideCommentButton.innerText = "Hide Child Comments";
 
-                downvoteButton.insertAdjacentElement('afterend', hideCommentButton);
+                downvoteButton.insertAdjacentElement('afterend', showHideCommentButton);
             }
         }
     });
