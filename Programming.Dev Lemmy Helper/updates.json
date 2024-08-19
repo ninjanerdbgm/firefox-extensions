@@ -5,6 +5,10 @@
           {
             "version": "1.1",
             "update_link": "https://github.com/ninjanerdbgm/firefox-extensions/releases/download/pd-lemmy-helper-1.1/pd-lemmy-helper.xpi"
+          },
+          {
+            "version": "1.2",
+            "update_link": "https://github.com/ninjanerdbgm/firefox-extensions/releases/download/pd-lemmy-helper-1.2/pd-lemmy-helper.xpi"
           }
         ]
       }
