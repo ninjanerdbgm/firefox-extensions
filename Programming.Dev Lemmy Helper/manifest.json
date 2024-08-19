@@ -16,5 +16,11 @@
             "js": ["comment-collapser.js"],
             "css": ["comment-collapser.css"]
         }
-    ]
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "update_url": "https://raw.githubusercontent.com/ninjanerdbgm/firefox-extensions/main/Programming.Dev%20Lemmy%20Helper/updates.json"
+        }
+    }
 }
