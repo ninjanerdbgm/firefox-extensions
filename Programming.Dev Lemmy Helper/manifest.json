@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Programming.Dev Lemmy Helper",
+    "version": "1.0",
+
+    "description": "A suite of tools to make the Programming.Dev experience a little better.",
+
+    "icons": {
+        "48": "icons/icon_48.png",
+        "96": "icons/icon_96.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://programming.dev/post/*"],
+            "js": ["comment-collapser.js"],
+            "css": ["comment-collapser.css"]
+        }
+    ]
+}
