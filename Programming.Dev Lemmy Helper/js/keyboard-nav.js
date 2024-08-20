@@ -1,21 +1,23 @@
 function initKeyboardNav() {
     document.addEventListener('keypress', (kp) => {
         if (window.location.href.indexOf('/post/') > -1 || window.location.href.indexOf('/comment/') > -1) {
-            switch (kp.key) {
-                case 'j':
-                case 'J':
-                    moveDown();
-                    break;
-                case 'k':
-                case 'K':
-                    moveUp();
-                    break;
-                case 'M':
-                case 'm':
-                    toggleCommentVisibility();
-                    break;
-                default:
-                    break;
+            if (typeof document.activeElement.type === 'undefined' || document.activeElement.type == "div") {
+                switch (kp.key) {
+                    case 'j':
+                    case 'J':
+                        moveDown();
+                        break;
+                    case 'k':
+                    case 'K':
+                        moveUp();
+                        break;
+                    case 'M':
+                    case 'm':
+                        toggleCommentVisibility();
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     });
