@@ -8,3 +8,9 @@ let me know.
 ### Hide/Show Child Comments
 ![Hide Child Comments](image-1.png)
 ![Show Child Comments](image-2.png)
+
+### Keyboard Navigation
+Rudimentary keyboard navigation is enabled in comments by default.
+ - j - Next Comment
+ - k - Previous Comment
+ - m - Show/Hide Child Comments
