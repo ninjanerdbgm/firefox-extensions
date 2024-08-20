@@ -1,25 +1,27 @@
 {
     "manifest_version": 2,
     "name": "Programming.Dev Lemmy Helper",
-    "version": "1.2",
-
+    "version": "1.3",
     "description": "A suite of tools to make the Programming.Dev experience a little better.",
-
     "icons": {
         "48": "icons/icon_48.png",
         "96": "icons/icon_96.png"
     },
-
     "content_scripts": [
         {
-            "matches": ["*://programming.dev/post/*"],
-            "js": ["comment-collapser.js"],
-            "css": ["comment-collapser.css"]
+            "matches": ["*://programming.dev/post/*", "*://programming.dev/comment/*"],
+            "js": ["js/comment-collapser.js", "js/keyboard-nav.js"],
+            "css": ["css/comment-collapser.css", "css/keyboard-nav.css"]
         }
     ],
-
+    "options_ui": {
+        "page": "html/settings.html",
+        "browser_style": true     
+    },
+    "permissions": ["storage"],
     "browser_specific_settings": {
         "gecko": {
+            "id": "{8a24405a-d26c-4ec6-a528-729046bd5152}",
             "update_url": "https://raw.githubusercontent.com/ninjanerdbgm/firefox-extensions/main/Programming.Dev%20Lemmy%20Helper/updates.json"
         }
     }
