@@ -5,6 +5,9 @@ Not for general public use, but if you found this repo and want a Firefox extens
 let me know.
 
 ## Programming.dev Lemmy Extensions
+### Building
+Run `npx webpack` in the root directory of this extension.
+
 ### Hide/Show Child Comments
 ![Hide Child Comments](image-1.png)
 ![Show Child Comments](image-2.png)
