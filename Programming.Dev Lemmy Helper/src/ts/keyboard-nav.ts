@@ -1,4 +1,4 @@
-import { Settings } from "./settings.class";
+import { Settings } from "./settings-class";
 import { trigger, isInteractableElement } from "./utils";
 
 export class KeyboardNavigation {

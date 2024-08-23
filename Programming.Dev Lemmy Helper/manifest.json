@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Programming.Dev Lemmy Helper",
-    "version": "1.4",
+    "version": "1.4.1",
     "description": "A suite of tools to make the Programming.Dev experience a little better.",
     "icons": {
         "48": "icons/icon_48.png",

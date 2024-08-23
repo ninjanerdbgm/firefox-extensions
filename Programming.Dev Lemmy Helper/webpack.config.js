@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     devtool: 'inline-source-map',
 	entry: {
-        'lemmy-helper': './src/ts/LemmyHelper.ts',
+        'lemmy-helper': './src/ts/index.ts',
         'settings': './src/ts/settings.ts'
     },
 	output: {
